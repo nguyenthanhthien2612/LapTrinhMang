@@ -1,0 +1,37 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.xml.crypto.Data;
+
+public class bai2 {
+
+	public static void main(String[] args) {
+		FileInputStream data = null;
+		
+		try {
+			data = new FileInputStream("E:\\CT221_LTM\\BT1\\src\\data2.txt");
+			int ch;
+			while((ch = data.read()) != -1) {
+				System.out.println((char)ch);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(data != null) {
+				try {
+					data.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+			
+			
+		}
+
+
+	}
+}

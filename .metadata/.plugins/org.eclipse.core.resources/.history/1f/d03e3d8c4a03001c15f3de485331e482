@@ -1,0 +1,19 @@
+import java.io.FileInputStream;
+
+public class bai2 {
+	public static void main(String[] args) {
+		
+		FileInputStream fin = null;
+        try {
+            fin = new FileInputStream("E:\\CT221_LTM\\BT1\\src\\data2.txt");
+            int i = fin.read();
+            System.out.print((char) i);
+ 
+            fin.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        } 
+        
+	}
+}
+

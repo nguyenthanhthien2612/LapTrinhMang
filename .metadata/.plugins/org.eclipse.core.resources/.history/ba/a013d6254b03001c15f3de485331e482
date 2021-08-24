@@ -1,0 +1,15 @@
+import java.io.File;
+import java.io.FileInputStream;
+
+public class bai2 {
+	public static void main(String[] args) {
+		
+		File file = new File("data3.txt");
+		
+		if(file.isFile()) {
+			System.out.println(file.getAbsolutePath());
+		}
+		else System.out.println("Khong Ton Tai");
+	}
+}
+
